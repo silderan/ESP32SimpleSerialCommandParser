@@ -1,0 +1,22 @@
+{
+    "name": "SimpleSerialCommandParser",
+    "description": "A tiny library for reading serial input commands to make more readable code.",
+    "keywords": "serial,command",
+    "authors": [
+        {
+            "name": "Rafael Dellà",
+            "url": "https://github.com/silderan",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/silderan/ESP32SimpleSerialCommandParser.git"
+    },
+    "version": "1.0.0",
+    "license": "MIT",
+    "homepage": "",
+    "frameworks": "arduino",
+    "platforms": "espressif8266, espressif32",
+    "headers": "SimpleSerialCommandParser.h"
+}

@@ -9,6 +9,7 @@ As per the "while developing", it's keeped simple, without value validations, de
 
 ## How to use.
 First and only once, download the library zip and import with Arduino IDE.
+Also, you need another (fool) library where I put some handly functions because I'm lazy to copy them all times. Its https://github.com/silderan/ESP32SilderanUtils
 
 Then, include header:
 #include <SimpleSerialCommandParser.h>
@@ -25,7 +26,7 @@ Just keep in mind that 0 is not a valid number. Start from 1.
 
 Enums allways starts from 0. So, force it properly:
 ```cpp
-enum MuCmds
+enum MyCmds
 {
   LedOn = 1,
   LedOff  // This will get number 2, no need to tell compiler that.

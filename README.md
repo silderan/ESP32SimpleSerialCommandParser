@@ -41,7 +41,7 @@ cmdParser.addCommandInfo( CMD_LED_OFF, {"turn", "off", "the", "led", "%d"} );
 ```
 Parameter values accepted are %d, %f, %u and %s, for integer, fload, unsigned and string.
 
-Now, un your loop, call readCommand to do the magic, this way:
+Now, in your loop, call readCommand to do the magic, this way:
 ```cpp
 // This will be the struct that the parser will fill with de data readed. It's not necessary to be static.
 static CommandParser::CmdData cmdData;
@@ -70,10 +70,10 @@ case CommandParser::RtnValue::CmdFound:
 }
 ```
 Well, here needs some explanation.
-CommandParser matches every word you put in the array of the second parameter of addCommandInfo function verbatim exept those starting with %. This ones will be captured and stored in the params vector of CmdData structure. The index of value is the number of % starting word - 1. It reminds regexp captures. But it converts code to int, unsigned or float and you get of by:
+CommandParser matches every word you put in the array of the second parameter of addCommandInfo function verbatim, except those starting with %. This ones will be captured and stored in the params vector of CmdData structure. The index of value is the number of % starting word - 1. It reminds regexp captures. But it converts code to integer, unsigned or float. You cant get of by:
 ```cpp
 cmdData[0].u; // Gets the first unsigned value in the command.
-cmdData[1].f;  // Gets the second value, as float, in de command. For example, in a command like "set gain of potentioneter %d %f"
+cmdData[1].f; // Gets the second value, as float, in de command. For example, in a command like "set gain of potentioneter %d %f"
 cmdData[i].d; // Gets the i+1 value, as decimal (integer), in the command.
 cmdData[i].s; // Gets the i+1 value, as String, in the command.
 ```
